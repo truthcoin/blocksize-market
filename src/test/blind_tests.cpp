@@ -49,7 +49,7 @@ BOOST_AUTO_TEST_CASE(naive_blinding_test)
         tx3.vin[1].prevout.n = 0;
         tx3.vout.resize(1);
         tx3.vout[0].nValue = 100;
-        tx3.nTxFee = 22;
+        // tx3.nTxFee = 22;
         BOOST_CHECK(cache.VerifyAmounts(tx3));
 
         std::vector<std::vector<unsigned char> > input_blinds;
@@ -72,7 +72,7 @@ BOOST_AUTO_TEST_CASE(naive_blinding_test)
         in3->vout.resize(1);
         in3->vout[0] = tx3.vout[0];
 
-        tx3.nTxFee--;
+        // tx3.nTxFee--;
         BOOST_CHECK(!cache.VerifyAmounts(tx3));
     }
 
@@ -88,7 +88,7 @@ BOOST_AUTO_TEST_CASE(naive_blinding_test)
         tx4.vout[0].nValue = 30;
         tx4.vout[1].nValue = 40;
         tx4.vout[2].nValue = 50;
-        tx4.nTxFee = 100 + 111 - 30 - 40 - 50;
+        // tx4.nTxFee = 100 + 111 - 30 - 40 - 50;
         BOOST_CHECK(cache.VerifyAmounts(tx4));
 
         std::vector<std::vector<unsigned char> > input_blinds;
@@ -121,7 +121,7 @@ BOOST_AUTO_TEST_CASE(naive_blinding_test)
         in4->vout[1] = tx4.vout[1];
         in4->vout[2] = tx4.vout[2];
 
-        tx4.nTxFee--;
+        // tx4.nTxFee--;
         BOOST_CHECK(!cache.VerifyAmounts(tx4));
     }
 }

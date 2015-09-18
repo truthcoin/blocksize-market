@@ -14,14 +14,14 @@ https://github.com/ElementsProject/elementsproject.github.io
 
 Read details and future in the project documentation
 
-What is the Blocksize Element?
+Which Element is this?
 -----------------------
 
-Blocksize Market is a version of Bitcoin where user-activities are limited to the following:
+"Blocksize Market" is a version of Bitcoin where a great deal of functionality has been removed. User-activities are limited to the following:
 
-1. Deposit Bitcoin (xfer coins, from the Bitcoin mainnet, to this Sidechain).
-2. Withdraw Bitcoin (xfer coins, from this Sidechain, to the Bitcoin mainnet).
-3. Buy shares.
+1. Deposit Bitcoin (ie: xfer coins, from the Bitcoin mainnet, to this Sidechain).
+2. Withdraw Bitcoin (ie: xfer coins, from this Sidechain, to the Bitcoin mainnet).
+3. Buy shares (see below).
 4. Sell shares.
 5. Set final market prices.
 
@@ -34,7 +34,7 @@ How Can I Help?
 2. Familiarize yourself with [trading via market scoring rules](http://www.truthcoin.info/papers/LogMSR_Demo.xlsx).
 3. Help me combine the two!
 
-Markets with MSRs are updated with a single formula, and single-party atomic state update (just like passing around a single Bitcoin). They have [already been implemented](https://github.com/truthcoin/truthcoin-cpp/blob/master/src/primitives/market.h) in my larger project, Truthcoin.
+Markets with MSRs do not need complex order book trade-matching technology. They are updated with a single formula, by a single-party atomic state update (just like passing around a single Bitcoin). They have [already been implemented](https://github.com/truthcoin/truthcoin-cpp/blob/master/src/primitives/market.h) in my larger project, Truthcoin.
 
 The remaining technical piece is a simple "freezing" of the market prices (also already implmented in Truthcoin) at their final values. However, while in Truthcoin this is very complex, here we want something different and simpler: 4 of 7 multisignature reports.
 

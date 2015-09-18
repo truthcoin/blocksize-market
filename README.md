@@ -36,9 +36,10 @@ How Can I Help?
 
 Markets with MSRs are updated with a single formula, and single-party atomic state update (just like passing around a single Bitcoin). They have [already been implemented](https://github.com/truthcoin/truthcoin-cpp/blob/master/src/primitives/market.h) in my larger project, Truthcoin.
 
-The remaining technical piece is a simple "freezing" of the market prices (also already implmented in Truthcoin) at their final values. However, while in Truthcoin this is very complex, here we want something different and simpler: 4 of 7 multisignature reports. 
+The remaining technical piece is a simple "freezing" of the market prices (also already implmented in Truthcoin) at their final values. However, while in Truthcoin this is very complex, here we want something different and simpler: 4 of 7 multisignature reports.
 
 From there, all that will be required will be to:
+
 1. Select the Blocksize proposals which, we feel, merit inclusion.
 2. Select the Reporters ("oracles").
 3. Initialize the chain with our chosen market.
